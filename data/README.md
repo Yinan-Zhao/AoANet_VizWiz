@@ -44,7 +44,7 @@ Download pre-extracted feature from [here](http://ivc.ischool.utexas.edu/VizWiz_
 Then run:
 
 ```bash
-python script/make_bu_data_vizwiz.py
+python scripts/make_bu_data_vizwiz.py
 ```
 
 This will create `data/vizwizbu_fc`, `data/vizwizbu_att` and `data/vizwizbu_box`. 
