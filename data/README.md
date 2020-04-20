@@ -39,7 +39,7 @@ $ python scripts/prepro_labels_vizwiz_pretrained.py
 
 ### Download Bottom-up features for images
 
-Download pre-extracted feature from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/tsv.zip) or use the [bottom-up attention model](https://github.com/peteanderson80/bottom-up-attention) to extract features (We mainly modified `tools/generate_tsv.py` to adapt to VizWiz-Caption. We also put our modified `generate_tsv.py` in this directory).
+Download pre-extracted feature from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/tsv.zip) or use the [bottom-up attention model](https://github.com/peteanderson80/bottom-up-attention) to extract features (We mainly modified `tools/generate_tsv.py` to adapt to VizWiz-Caption. We also put our modified `generate_tsv.py` in `scripts/` of this repo).
 
 Then run:
 
