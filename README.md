@@ -35,7 +35,7 @@ Then run:
 $ CUDA_VISIBLE_DEVICES=0 sh finetune_vizwiz.sh
 ```
 
-### Evaluation
+## Evaluation
 
 Generate predictions for the test split using the model pretrained on MSCOCO-Caption.
 
