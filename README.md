@@ -1,6 +1,6 @@
-# Benchmarking AoANet on VizWiz-Caption
+# Benchmarking AoANet on VizWiz-Captions
 
-This repository includes the code for benchmarking [Attention on Attention for Image Captioning](https://arxiv.org/abs/1908.06954) on [VizWiz-Caption](https://vizwiz.org/tasks-and-datasets/image-captioning/).
+This repository includes the code for benchmarking [Attention on Attention for Image Captioning](https://arxiv.org/abs/1908.06954) on [VizWiz-Captions](https://vizwiz.org/tasks-and-datasets/image-captioning/).
 
 ## Requirements
 
@@ -14,7 +14,7 @@ This repository includes the code for benchmarking [Attention on Attention for I
 
 ### Prepare data
 
-See details in `data/README.md`. We combine both the train and val split of VizWiz-Caption for training.
+See details in `data/README.md`. We combine both the train and val split of VizWiz-Captions for training.
 
 
 ### Training from scratch
@@ -25,7 +25,7 @@ $ CUDA_VISIBLE_DEVICES=0 sh train_vizwiz.sh
 
 See `opts.py` for the options. You can also download our trained model [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/log/log_aoanet_vizwiz_rl). 
 
-### Fine-tuning models pretrained on MSCOCO-Caption
+### Fine-tuning models pretrained on MSCOCO-Captions
 
 Download the pretrained models (log_aoanet_rl) from [here](https://drive.google.com/drive/folders/1ab0iPNyxdVm79ml-oozsIlH7H6t6dIVl?usp=sharing). 
 
@@ -37,7 +37,7 @@ $ CUDA_VISIBLE_DEVICES=0 sh finetune_vizwiz.sh
 
 ## Evaluation
 
-Generate predictions for the test split using the model pretrained on MSCOCO-Caption.
+Generate predictions for the test split using the model pretrained on MSCOCO-Captions.
 
 ```bash
 $ CUDA_VISIBLE_DEVICES=0 sh eval_pretrained.sh

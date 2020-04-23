@@ -8,7 +8,7 @@
 
 ### Download COCO vocabulary
 
-Download preprocessed coco vocabulary from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/cocotalk_vocab.json) and put it in `data/`. It is necessary when fine-tuning the model which was originally trained on MSCOCO-Caption to VizWiz-Caption. 
+Download preprocessed coco vocabulary from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/cocotalk_vocab.json) and put it in `data/`. It is necessary when fine-tuning the model which was originally trained on MSCOCO-Captions to VizWiz-Captions. 
 
 ### Download preprocessed VizWiz captions
 
@@ -23,15 +23,15 @@ $ python scripts/create_test_dummy.py
 
 ### Extract image meta information and build vocabulary
 
-Build image meta and vocabulary for `VizWiz-Caption` and `VizWiz-Caption + MSCOCO-Caption` by running:
+Build image meta and vocabulary for `VizWiz-Captions` and `VizWiz-Captions + MSCOCO-Captions` by running:
 
 ```bash
 $ python scripts/prepro_labels_vizwiz.py
 ```
 
-`prepro_labels.py` will map all words that occur <= 5 times to a special `UNK` token, and create a vocabulary for all the remaining words. For `VizWiz-Caption` , the image information and vocabulary are dumped into `data/vizwiztalk.json` and discretized caption data are dumped into `data/vizwiztalk_label.h5`. For `VizWiz-Caption + MSCOCO-Caption`, they are dumped into `data/vizwiztalk_withCOCO.json` and `data/vizwiztalk_withCOCO_label.h5`. The processed files for `VizWiz-Caption` are used for training from scrach and those for `VizWiz-Caption + MSCOCO-Caption` are used for fine-tuning.
+`prepro_labels.py` will map all words that occur <= 5 times to a special `UNK` token, and create a vocabulary for all the remaining words. For `VizWiz-Captions` , the image information and vocabulary are dumped into `data/vizwiztalk.json` and discretized caption data are dumped into `data/vizwiztalk_label.h5`. For `VizWiz-Captions + MSCOCO-Captions`, they are dumped into `data/vizwiztalk_withCOCO.json` and `data/vizwiztalk_withCOCO_label.h5`. The processed files for `VizWiz-Captions` are used for training from scrach and those for `VizWiz-Captions + MSCOCO-Captions` are used for fine-tuning.
 
-To use the pretrained models on `MSCOCO-Caption` directly for evaluation, first build image meta and vocabulary by running:
+To use the pretrained models on `MSCOCO-Captions` directly for evaluation, first build image meta and vocabulary by running:
 
 ```bash
 $ python scripts/prepro_labels_vizwiz_pretrained.py
@@ -39,7 +39,7 @@ $ python scripts/prepro_labels_vizwiz_pretrained.py
 
 ### Download Bottom-up features for images
 
-Download pre-extracted feature from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/tsv.zip) or use the [bottom-up attention model](https://github.com/peteanderson80/bottom-up-attention) to extract features (We mainly modified `tools/generate_tsv.py` to adapt to VizWiz-Caption. We also put our modified `generate_tsv.py` in `scripts/` of this repo).
+Download pre-extracted feature from [here](http://ivc.ischool.utexas.edu/VizWiz_final/caption/AoANet_VizWiz/data/tsv.zip) or use the [bottom-up attention model](https://github.com/peteanderson80/bottom-up-attention) to extract features (We mainly modified `tools/generate_tsv.py` to adapt to VizWiz-Captions. We also put our modified `generate_tsv.py` in `scripts/` of this repo).
 
 Then run:
 
