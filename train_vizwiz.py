@@ -216,7 +216,7 @@ def train(opt):
             # make evaluation on validation set, and save model
             if (iteration % opt.save_checkpoint_every == 0):
                 # eval model
-                eval_kwargs = {'split': 'train',
+                eval_kwargs = {'split': 'val',
                                 'dataset': opt.input_json,
                                 'num_images': 1}
                 eval_kwargs.update(vars(opt))
